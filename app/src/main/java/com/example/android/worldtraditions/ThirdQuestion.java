@@ -86,4 +86,16 @@ public class ThirdQuestion extends AppCompatActivity {
 
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("base_num_of_points", baseNumOfPoints);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        baseNumOfPoints = savedInstanceState.getInt("base_num_of_points");
+    }
 }

@@ -6,15 +6,83 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="AppTheme.NoActionBar">
+        <item name="android:background">@color/colorPrimary</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- View styles -->
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="RootLayoutStyle">
+        <item name="android:paddingTop">@dimen/vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/vertical_margin</item>
+        <item name="android:paddingLeft">@dimen/horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/horizontal_margin</item>
+    </style>
+
+    <style name="DescriptionTextViewStyle">
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:padding">@dimen/view_padding_large</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
+        <item name="android:textAppearance">@style/HeadingTextStyle</item>
+    </style>
+
+    <style name="FinalViewStyle">
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
+    </style>
+
+    <style name="FinalTextViewHeaderStyle" parent="FinalTextViewStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="FinalTextViewStyle">
+        <item name="android:textAppearance">@style/HeadingTextStyle</item>
+        <item name="android:padding">@dimen/view_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
+    </style>
+
+    <style name="LandQuestionsViewStyle">
+        <item name="android:fontFamily">@font/anton</item>
+        <item name="android:padding">@dimen/view_padding</item>
+        <item name="android:textAppearance">@style/HeadingTextStyle</item>
+
+    </style>
+    <style name="QuestionViewStyle">
+        <item name="android:fontFamily">@font/anton</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/view_padding</item>
+        <item name="android:textAppearance">@style/HeadingTextStyle</item>
+
+    </style>
+
+    <style name="AnswersViewStyle">
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
+        <item name="android:padding">@dimen/view_padding</item>
+    </style>
+
+    <!-- Text Style -->
+    <style name="HeadingTextStyle">
+        <item name="android:fontFamily">@font/anton</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="ButtonStyle">
+        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+        <item name="android:paddingLeft">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/button_padding_horizontal</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
 
 </resources>

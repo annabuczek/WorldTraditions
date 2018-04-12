@@ -2,9 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RootLayoutStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/RootLayoutStyle"
     tools:context="com.example.android.worldtraditions.SecondQuestion">
 
     <ImageView
@@ -12,23 +12,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/earth"
-        app:layout_constraintBottom_toTopOf="@+id/question"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/radio_g_second_question"
+        app:layout_constraintEnd_toStartOf="@+id/question"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/question"
-        style="@style/QuestionViewStyle"
-        android:layout_width="match_parent"
+        style="@style/LandQuestionsViewStyle"
+        android:layout_width="@dimen/land_question_text_view_width"
         android:layout_height="wrap_content"
         android:text="@string/second_question"
         app:layout_constraintBottom_toTopOf="@+id/radio_g_second_question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radio_g_second_question"
@@ -56,7 +56,6 @@
             android:text="@string/second_question_answer_2" />
 
         <RadioButton
-
             android:id="@+id/radio_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

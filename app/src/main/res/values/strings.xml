@@ -1,4 +1,32 @@
 <resources>
-    <string name="app_name">WorldTraditions</string>
-    <string name="title_activity_first_question">FirstQuestion</string>
+    <string name="app_name">World's Traditions</string>
+
+    <string name="quiz_description">Check your knowledge about the most interesting and unexpected traditions in the world.</string>
+
+    <!--Buttons-->
+    <string name="start_button">start quiz</string>
+    <string name="next_button">next question</string>
+    <string name="finish_button">finish quiz</string>
+    <string name="start_again_button">start again</string>
+
+    <!-- Questions -->
+    <string name="first_question">Krampus is a \'Bad Santa\', half-goat, half-demon who scares children and adults in December. \nIn which countries you’ll meet him?</string>
+    <string name="first_question_answer_1">Austria</string>
+    <string name="first_question_answer_2">Switzerland</string>
+    <string name="first_question_answer_3">Hungary</string>
+    <string name="first_question_answer_4">Italy</string>
+
+    <string name="second_question">Each year on the last Monday in May participants chase an enormous cheese rolling down the hill. \nIn which country?</string>
+    <string name="second_question_answer_1">England</string>
+    <string name="second_question_answer_2">Scotland</string>
+    <string name="second_question_answer_3">Norway</string>
+    <string name="second_question_answer_4">Denmark</string>
+
+    <string name="third_question">In Denmark, people throw cinnamon at friends on the day of their birthday if they are still single. \nWhich age?</string>
+    <string name="third_question_answer_1">21</string>
+    <string name="third_question_answer_2">25</string>
+    <string name="third_question_answer_3">30</string>
+    <string name="third_question_answer_4">40</string>
+
+    <string name="fourth_question">Tomatine is the biggest tomato fight in the world, taking place every year in August. \nIn which country?</string>
 </resources>

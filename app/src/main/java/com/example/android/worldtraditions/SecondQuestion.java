@@ -1,13 +1,11 @@
 package com.example.android.worldtraditions;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 public class SecondQuestion extends AppCompatActivity {
 
@@ -27,7 +25,8 @@ public class SecondQuestion extends AppCompatActivity {
             } else {
                 baseNumOfPointsString = extras.getString("baseNumOfPointsString");
             }
-        } else {
+        }
+        else {
             baseNumOfPointsString = (String) savedInstanceState.getSerializable("baseNumOfPointsString");
         }
 
@@ -85,6 +84,20 @@ public class SecondQuestion extends AppCompatActivity {
                 break;
 
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("extra_num_of_points", extraNumOfPoints);
+        outState.putInt("base_num_of_points", baseNumOfPoints);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        extraNumOfPoints = savedInstanceState.getInt("extra_num_of_points");
+        baseNumOfPoints = savedInstanceState.getInt("base_num_of_points");
     }
 }
 
