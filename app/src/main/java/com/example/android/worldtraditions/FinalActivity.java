@@ -39,16 +39,16 @@ public class FinalActivity extends AppCompatActivity {
         String headerMessage;
 
         if (baseNumOfPoints == 4 || baseNumOfPoints == 3) {
-            headerMessage = "Congratulations!";
+            headerMessage = getString(R.string.max_points_message);
         }
         else if (baseNumOfPoints == 2 || baseNumOfPoints == 1) {
-            headerMessage = "Could be better!";
+            headerMessage = getString(R.string.average_points_message);
         }
         else if(baseNumOfPoints == 0) {
-            headerMessage = "Try again!";
+            headerMessage = getString(R.string.zero_points_message);
         }
         else {
-            headerMessage = "Something went wrong!";
+            headerMessage = getString(R.string.error_points_message);
         }
 
         return headerMessage;
@@ -59,10 +59,10 @@ public class FinalActivity extends AppCompatActivity {
         String resultMessage;
 
         if (baseNumOfPoints >= 0 && baseNumOfPoints < 6) {
-            resultMessage = "You've got " + baseNumOfPoints + "/4 points!";
+            resultMessage = getString(R.string.result_message, baseNumOfPoints);
         }
         else {
-            resultMessage = "Unexpected mistake!";
+            resultMessage = getString(R.string.error_result_message);
         }
 
         return resultMessage;

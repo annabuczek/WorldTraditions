@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name">World's Traditions</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">World\'s Traditions</string>
 
     <string name="quiz_description">Check your knowledge about the most interesting and unexpected traditions in the world.</string>
 
@@ -29,4 +29,16 @@
     <string name="third_question_answer_4">40</string>
 
     <string name="fourth_question">Tomatine is the biggest tomato fight in the world, taking place every year in August. \nIn which country?</string>
+
+    <!-- Result view messages -->
+
+    <!--Header messages -->
+    <string name="max_points_message">Congratulations!</string>
+    <string name="average_points_message">Could be better!</string>
+    <string name="zero_points_message">Try again!</string>
+    <string name="error_points_message">Something went wrong!</string>
+
+    <!--Result message-->
+    <string name="result_message">You\'ve got <xliff:g example="2" id="points">%1$d</xliff:g>/4 points!</string>
+    <string name="error_result_message">Unexpected error!</string>
 </resources>
