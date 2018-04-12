@@ -1,12 +1,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">World\'s Traditions</string>
+    <string name="app_name">World\'s Traditions Quiz</string>
 
     <string name="quiz_description">Check your knowledge about the most interesting and unexpected traditions in the world.</string>
 
     <!--Buttons-->
     <string name="start_button">start quiz</string>
     <string name="next_button">next question</string>
-    <string name="finish_button">finish quiz</string>
+    <string name="finish_button">finish quiz</string>ź
     <string name="start_again_button">start again</string>
 
     <!-- Questions -->

@@ -1,11 +1,11 @@
 package com.example.android.worldtraditions;
 
-import android.app.Application;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FinalActivity extends AppCompatActivity {
 
@@ -16,12 +16,13 @@ public class FinalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
 
-        Intent intent = getIntent();
-        baseNumOfPoints = intent.getIntExtra("POINTS", 0);
+        Intent i1 = getIntent();
+        baseNumOfPoints = i1.getIntExtra("POINTS", 0);
 
         String headerMessage = createHeaderMessage(baseNumOfPoints);
         String resultMessage = createResultMessage(baseNumOfPoints);
         displayMessage(headerMessage, resultMessage);
+        Toast.makeText(this, getString(R.string.result_message, baseNumOfPoints), Toast.LENGTH_SHORT).show();
 
         findViewById(R.id.start_again).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,34 +35,30 @@ public class FinalActivity extends AppCompatActivity {
 
     }
 
-    public String createHeaderMessage (int baseNumOfPoints) {
+    public String createHeaderMessage(int baseNumOfPoints) {
 
         String headerMessage;
 
         if (baseNumOfPoints == 4 || baseNumOfPoints == 3) {
             headerMessage = getString(R.string.max_points_message);
-        }
-        else if (baseNumOfPoints == 2 || baseNumOfPoints == 1) {
+        } else if (baseNumOfPoints == 2 || baseNumOfPoints == 1) {
             headerMessage = getString(R.string.average_points_message);
-        }
-        else if(baseNumOfPoints == 0) {
+        } else if (baseNumOfPoints == 0) {
             headerMessage = getString(R.string.zero_points_message);
-        }
-        else {
+        } else {
             headerMessage = getString(R.string.error_points_message);
         }
 
         return headerMessage;
     }
 
-    public String createResultMessage (int baseNumOfPoints) {
+    public String createResultMessage(int baseNumOfPoints) {
 
         String resultMessage;
 
         if (baseNumOfPoints >= 0 && baseNumOfPoints < 6) {
             resultMessage = getString(R.string.result_message, baseNumOfPoints);
-        }
-        else {
+        } else {
             resultMessage = getString(R.string.error_result_message);
         }
 

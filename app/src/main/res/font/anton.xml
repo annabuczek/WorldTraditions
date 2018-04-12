@@ -9,6 +9,6 @@
 
         app:font="@font/anton_regular"
         app:fontStyle="normal"
-        app:fontWeight="400"/>
+        app:fontWeight="400" />
 
 </font-family>

@@ -1,8 +1,8 @@
 package com.example.android.worldtraditions;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -50,8 +50,7 @@ public class FourthQuestion extends AppCompatActivity {
 
         if (answerString.equals(correctAnswer1) || answerString.equals(correctAnswer2)) {
             extraNumOfPoints = 1;
-        }
-        else {
+        } else {
             extraNumOfPoints = 0;
         }
 

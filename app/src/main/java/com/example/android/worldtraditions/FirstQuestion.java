@@ -34,24 +34,24 @@ public class FirstQuestion extends AppCompatActivity {
         });
     }
 
-    public void submitAnswer(){
+    public void submitAnswer() {
 
-       CheckBox firstAns = findViewById(R.id.first_answer);
-       CheckBox secondAns = findViewById(R.id.second_answer);
-       CheckBox thirdAns = findViewById(R.id.third_answer);
-       CheckBox fourthAns = findViewById(R.id.fourth_answer);
+        CheckBox firstAns = findViewById(R.id.first_answer);
+        CheckBox secondAns = findViewById(R.id.second_answer);
+        CheckBox thirdAns = findViewById(R.id.third_answer);
+        CheckBox fourthAns = findViewById(R.id.fourth_answer);
 
-       Boolean hasFirstAns = firstAns.isChecked();
-       Boolean hasSecondAns = secondAns.isChecked();
-       Boolean hasThirdAns = thirdAns.isChecked();
-       Boolean hasFourthAns = fourthAns.isChecked();
+        Boolean hasFirstAns = firstAns.isChecked();
+        Boolean hasSecondAns = secondAns.isChecked();
+        Boolean hasThirdAns = thirdAns.isChecked();
+        Boolean hasFourthAns = fourthAns.isChecked();
 
-       addPoints(hasFirstAns, hasSecondAns, hasThirdAns, hasFourthAns);
+        addPoints(hasFirstAns, hasSecondAns, hasThirdAns, hasFourthAns);
 
     }
 
-        public void addPoints (boolean firstAns, boolean secondAns, boolean thirdAns, boolean fourthAns) {
-        if(firstAns && secondAns && thirdAns && !fourthAns) {
+    public void addPoints(boolean firstAns, boolean secondAns, boolean thirdAns, boolean fourthAns) {
+        if (firstAns && secondAns && thirdAns && !fourthAns) {
             baseNumOfPoints = 1;
         }
     }
