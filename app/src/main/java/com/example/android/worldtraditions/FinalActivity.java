@@ -16,19 +16,8 @@ public class FinalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
 
-        String baseNumOfPointsString;
-        if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if (extras == null) {
-                baseNumOfPointsString = null;
-            } else {
-                baseNumOfPointsString = extras.getString("baseNumOfPointsString");
-            }
-        } else {
-            baseNumOfPointsString = (String) savedInstanceState.getSerializable("baseNumOfPointsString");
-        }
-
-        baseNumOfPoints = Integer.parseInt(baseNumOfPointsString);
+        Intent intent = getIntent();
+        baseNumOfPoints = intent.getIntExtra("POINTS", 0);
 
         String headerMessage = createHeaderMessage(baseNumOfPoints);
         String resultMessage = createResultMessage(baseNumOfPoints);

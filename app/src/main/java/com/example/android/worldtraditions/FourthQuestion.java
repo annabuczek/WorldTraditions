@@ -18,19 +18,8 @@ public class FourthQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fourth_question);
 
-        String baseNumOfPointsString;
-        if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if (extras == null) {
-                baseNumOfPointsString = null;
-            } else {
-                baseNumOfPointsString = extras.getString("baseNumOfPointsString");
-            }
-        } else {
-            baseNumOfPointsString = (String) savedInstanceState.getSerializable("baseNumOfPointsString");
-        }
-
-        baseNumOfPoints = Integer.parseInt(baseNumOfPointsString);
+        Intent intent = getIntent();
+        baseNumOfPoints = intent.getIntExtra("POINTS", 0);
 
         Log.i("FourthQuestion", "The num of points is " + baseNumOfPoints);
 
@@ -41,12 +30,10 @@ public class FourthQuestion extends AppCompatActivity {
 
                 submitAnswer();
 
-                Log.i("FourthQuestion", "The base num of extra points   " + extraNumOfPoints);
-                Log.i("FourthQuestion", "The base num of points po przeliczeniu  " + baseNumOfPoints);
+                Log.i("FourthQuestion", "The base num of points after calculating is " + baseNumOfPoints);
 
                 Intent intent = new Intent(FourthQuestion.this, FinalActivity.class);
-                String baseNumOfPointsString = String.valueOf(baseNumOfPoints);
-                intent.putExtra("baseNumOfPointsString", baseNumOfPointsString);
+                intent.putExtra("POINTS", baseNumOfPoints);
                 startActivity(intent);
 
             }

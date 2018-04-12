@@ -17,20 +17,8 @@ public class SecondQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_question);
 
-        String baseNumOfPointsString;
-        if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if(extras == null) {
-                baseNumOfPointsString = null;
-            } else {
-                baseNumOfPointsString = extras.getString("baseNumOfPointsString");
-            }
-        }
-        else {
-            baseNumOfPointsString = (String) savedInstanceState.getSerializable("baseNumOfPointsString");
-        }
-
-        baseNumOfPoints = Integer.parseInt(baseNumOfPointsString);
+        Intent intent = getIntent();
+        baseNumOfPoints = intent.getIntExtra("POINTS", 0);
 
         Log.i("SecondQuestion", "The num of points is " + baseNumOfPoints);
 
@@ -40,11 +28,10 @@ public class SecondQuestion extends AppCompatActivity {
 
                 submitAnswer();
 
-                Log.i("SecondQuestion", "The base num of points po przeliczeniu  " + baseNumOfPoints);
+                Log.i("SecondQuestion", "The base num of points after calculating is " + baseNumOfPoints);
 
                 Intent intent = new Intent(SecondQuestion.this, ThirdQuestion.class);
-                String baseNumOfPointsString = String.valueOf(baseNumOfPoints);
-                intent.putExtra("baseNumOfPointsString", baseNumOfPointsString);
+                intent.putExtra("POINTS", baseNumOfPoints);
                 startActivity(intent);
             }
         });
@@ -89,14 +76,12 @@ public class SecondQuestion extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("extra_num_of_points", extraNumOfPoints);
         outState.putInt("base_num_of_points", baseNumOfPoints);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        extraNumOfPoints = savedInstanceState.getInt("extra_num_of_points");
         baseNumOfPoints = savedInstanceState.getInt("base_num_of_points");
     }
 }

@@ -27,8 +27,7 @@ public class FirstQuestion extends AppCompatActivity {
                 Log.i("FirstQuestion", "The num of points after click is " + baseNumOfPoints);
 
                 Intent intent = new Intent(FirstQuestion.this, SecondQuestion.class);
-                String baseNumOfPointsString = String.valueOf(baseNumOfPoints);
-                intent.putExtra("baseNumOfPointsString", baseNumOfPointsString);
+                intent.putExtra("POINTS", baseNumOfPoints);
                 startActivity(intent);
 
             }
